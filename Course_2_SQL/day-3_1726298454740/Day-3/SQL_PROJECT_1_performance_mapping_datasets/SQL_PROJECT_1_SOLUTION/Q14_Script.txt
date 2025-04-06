@@ -1,0 +1,55 @@
+
+-- Q14
+
+DELIMITER $$
+USE `employee`$$
+CREATE FUNCTION Check_JobProfiles (eid   varchar(5)) 
+	RETURNS varchar(100) 
+    DETERMINISTIC
+BEGIN
+	declare ex int;
+    declare vrole varchar(100);
+    declare flag varchar(10);
+    select exp, ROLE into ex, VROLE from data_science_team where emp_ID = eid;
+  
+		if ex > 12 and ex < 16 then
+			if VROLE = 'Manager' then
+				set flag = 'Yes';
+			else
+				set flag = 'No';
+			end if;
+			
+		elseif ex > 10 and ex <= 12 then 
+			if VROLE = 'LEAD DATA SCIENTIST' then
+				set flag = 'Yes';
+			else
+				set flag = 'No';
+			end if;
+			
+		elseif ex > 5 and ex <=10 then 
+			if VROLE = 'SENIOR DATA SCIENTIST' then
+				set flag = 'Yes';
+			else
+				set flag = 'No';
+			end if;
+
+		elseif ex > 2 and ex <=5 then
+			if VROLE = 'ASSOCIATE DATA SCIENTIST' then
+				set flag = 'Yes';
+			else
+				set flag = 'No';
+			end if;
+			
+		elseif ex <= 2 then
+			if VROLE = 'JUNIOR DATA SCIENTIST' then
+				set flag = 'Yes';
+			else
+				set flag = 'No';
+			end if;
+		end if;
+RETURN flag;
+END$$
+DELIMITER ;
+
+SELECT *,Check_JobProfiles(Emp_ID) as Check_Profile FROM data_science_team;
+
