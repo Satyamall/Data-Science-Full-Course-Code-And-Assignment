@@ -1,0 +1,24 @@
+https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv
+
+
+['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+
+'https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data'
+
+['Sample code', 'Clump Thickness', 'Uniformity of Cell Size', 'Uniformity of Cell Shape', 'Marginal Adhesion', 'Single Epithelial Cell Size', 'Bare Nuclei', 'Bland Chromatin', 'Normal Nucleoli', 'Mitoses', 'Class']
+
+
+'https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data'
+
+names = ['Class', 'Alcohol', 'Malic acid', 'Ash',
+         'Alcalinity of ash', 'Magnesium', 'Total phenols',
+         'Flavanoids', 'Nonflavanoid phenols', 'Proanthocyanins',
+         'Color intensity', 'Hue', 'OD280/OD315 of diluted wines',
+         'Proline']
+
+
+
+
+
+
+
